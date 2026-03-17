@@ -157,6 +157,7 @@ modutil.once_loaded.game(function()
         import_as_fallback(rom.game)
         registerHooks()
         if config.Enabled then apply() end
+        if not mods['adamant-Core'] then SetupRunData() end
     end)
 end)
 -- =============================================================================
@@ -172,6 +173,7 @@ rom.gui.add_to_menu_bar(function()
         if chg then
             config.Enabled = val
             if val then apply() else disable() end
+            SetupRunData()
         end
         if rom.ImGui.IsItemHovered() and public.definition.tooltip ~= "" then
             rom.ImGui.SetTooltip(public.definition.tooltip)
