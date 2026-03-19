@@ -7,7 +7,7 @@ namespace = "adamant"
 name = "ETFix"
 versionNumber = "1.0.0"
 description = "Fixes ET working with Anubis by creating a 3rd OAtk field. Fixes Anubis OAtk distance based on casting angle."
-websiteUrl = "https://github.com/maybe-adamant/h2-pack-ETFix"
+websiteUrl = "https://github.com/maybe-adamant/h2-modpack-ETFix"
 containsNsfwContent = false
 
 [package.dependencies]
