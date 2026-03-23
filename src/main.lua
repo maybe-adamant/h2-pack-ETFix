@@ -35,7 +35,7 @@ end
 public.definition = {
     id       = "ETFix",
     name     = "ET Fixes",
-    category = "BugFixes",
+    category = "Bug Fixes",
     group    = "Boons & Hammers",
     tooltip  = "Fixes ET working with Anubis by creating a 3rd OAtk field.\nFixes Anubis OAtk distance based on casting angle.",
     default  = true,
