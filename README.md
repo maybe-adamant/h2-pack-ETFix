@@ -1,10 +1,10 @@
 # Eternal Torment & Anubis Fixes
 
-> A bug fix that corrects several issues related to the "Eternal Torment" boon and the Staff's Aspect of Anubis.
+> A bug fix that corrects several issues related to the "Exceptional Talent" boon and the Staff's Aspect of Anubis.
 
 ## Features
 
-- Fixes a bug preventing the "Eternal Torment" boon from working correctly with the Aspect of Anubis.
+- Fixes a bug preventing Exceptional Talent boon from working correctly with the Aspect of Anubis.
 - Fixes the Omega Attack of the Anubis aspect to correctly calculate its distance based on the casting angle.
 
 ## Installation
