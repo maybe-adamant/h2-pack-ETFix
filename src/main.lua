@@ -20,14 +20,6 @@ local backup, revert = lib.createBackupSystem()
 -- =============================================================================
 
 
-local function SafeArrayInsert(tbl, fieldName, value)
-    if tbl[fieldName] then
-        if not Contains(tbl[fieldName], value) then
-            table.insert(tbl[fieldName], value)
-        end
-    end
-end
-
 -- =============================================================================
 -- MODULE DEFINITION
 -- =============================================================================
@@ -51,12 +43,9 @@ local function apply()
     if not TraitData.DoubleExManaBoon then return end
     backup(TraitData, "DoubleExManaBoon")
 
-    for _, propertyChange in ipairs(TraitData.DoubleExManaBoon.PropertyChanges or {}) do
-        if Contains(propertyChange.FalseTraitNames, "StaffOneWayAttackTrait") then
-            SafeArrayInsert(propertyChange, "FalseTraitNames", "StaffRaiseDeadAspect")
-            break
-        end
-    end
+    table.insert(TraitData.DoubleExManaBoon.PropertyChanges[1].FalseTraitNames, 
+                    "StaffRaiseDeadAspect")
+                    
     TraitData.DoubleExManaBoon.OnWeaponFiredFunctions = {
         ValidWeapons = { "WeaponStaffSwing5" },
         FunctionName = "CreateSecondAnubisWall",
