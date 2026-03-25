@@ -16,11 +16,6 @@ public.config = config
 local backup, revert = lib.createBackupSystem()
 
 -- =============================================================================
--- UTILITIES
--- =============================================================================
-
-
--- =============================================================================
 -- MODULE DEFINITION
 -- =============================================================================
 
@@ -43,9 +38,8 @@ local function apply()
     if not TraitData.DoubleExManaBoon then return end
     backup(TraitData, "DoubleExManaBoon")
 
-    table.insert(TraitData.DoubleExManaBoon.PropertyChanges[1].FalseTraitNames, 
+    table.insert(TraitData.DoubleExManaBoon.PropertyChanges[1].FalseTraitNames,
                     "StaffRaiseDeadAspect")
-                    
     TraitData.DoubleExManaBoon.OnWeaponFiredFunctions = {
         ValidWeapons = { "WeaponStaffSwing5" },
         FunctionName = "CreateSecondAnubisWall",
